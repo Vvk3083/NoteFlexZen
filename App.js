@@ -1,7 +1,6 @@
 import React from "react";
 import Sidebar from "./components/Sidebar";
 import Editor from "./components/Editor";
-import { data } from "./data";
 import Split from "react-split";
 import { nanoid } from "nanoid";
 
@@ -25,22 +24,6 @@ export default function App() {
     setNotes((prevNotes) => [newNote, ...prevNotes]);
     setCurrentNoteId(newNote.id);
   }
-
-  // function updateNote(text) {
-  //     setNotes(oldNotes => {
-  //         const newArray = []
-  //         for(let i = 0; i < oldNotes.length; i++) {
-  //             const oldNote = oldNotes[i]
-  //             if(oldNote.id === currentNoteId) {
-  //                 // Put the most recently-modified note at the top
-  //                 newArray.unshift({ ...oldNote, body: text })
-  //             } else {
-  //                 newArray.push(oldNote)
-  //             }
-  //         }
-  //         return newArray
-  //     })
-  // }
 
   function updateNote(text) {
     setNotes((oldNotes) => {
